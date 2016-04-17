@@ -2,7 +2,7 @@
 # launcher.sh
 # navigate to home dir, then to this dir, execute the python script, then back home
 
-LOGFILE=/home/pi/hackathon/restart.log
+LOGFILE=/home/pi/hackathon/MCE3/restart.log
 
 writelog() {
   now='date'
@@ -16,7 +16,7 @@ writelog "Starting"
 whilte true; do
   cd /
   cd home/pi
-  cd hackathon
+  cd hackathon/MCE3
   sudo python PiHouse.py
   #sudo python PiHouseLED.py
   writelog "Exited with status $?"
