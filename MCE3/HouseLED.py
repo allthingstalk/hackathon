@@ -15,10 +15,8 @@ IOT.DeviceId = ""
 IOT.ClientId = ""
 IOT.ClientKey = ""
 
-#Define each asset below. provide a Name and Pin. The Pin number is used to define the Pin number on your raspberry Pi shield
-#and to create a unique assetId which is a combination of deviceID+Pin number. The Pin number can be any value between (0 - 2^63)
-
-actuatorName = "Diode"
+#define each sensor
+actuatorName = "LED"
 actuatorPin = 6
 
 #set up the pins
@@ -42,7 +40,7 @@ IOT.on_message = on_message
 
 #make certain that the device & it's features are defined in the cloudapp
 IOT.connect()
-IOT.addAsset(actuatorPin, actuatorName, "Light Emitting Diode", True, "boolean")
+IOT.addAsset(actuatorPin, actuatorName, "Status LED", True, "boolean")
 IOT.subscribe()
 
 while True:
