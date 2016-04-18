@@ -12,7 +12,7 @@ writelog() {
 sleep 1  # pause so the os can init the pins
 
 writelog "Starting"
-whilte true; do
+while true; do
   cd /
   cd home/pi
   cd hackathon/MCE3
